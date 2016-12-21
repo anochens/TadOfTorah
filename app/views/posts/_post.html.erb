@@ -1,0 +1,30 @@
+<%- model_class = Post -%>
+
+<% title = 'Untitled' %>
+<% title = @post.title if @post %>
+
+<div class="page-header">
+  <h1><%= link_to t('.show', :default => title.titleize),
+                      post_path(@post), :class => 'title' %></h1>
+</div>
+
+<dl class="dl-horizontal">
+
+  <dt><strong>By: </strong></dt>
+  <dd><%= @post.author %></dd>
+
+  <dt><strong>Updated at: </strong></dt>
+  <dd><%= @post.updated_at %></dd>
+               
+  <dt></dt>
+  <dd><%= @post.content %></dd>
+
+  <dt><strong><%= model_class.human_attribute_name(:ref_source) %>:</strong></dt>
+  <dd><%= @post.ref_source %></dd>
+
+
+ 
+
+
+</dl>
+

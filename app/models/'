@@ -1,0 +1,30 @@
+
+class Post
+
+  include Mongoid::Document
+
+
+	def created_at
+		:created_at || ''
+	end
+
+	def updated_at
+		:updated_at || ''
+	end
+
+
+  field :title, type: String
+
+  field :content, type: String
+
+  field :author, type: String
+
+  field :created_at, type: Time
+
+  field :updated_at, type: Time
+
+  field :ref_source, type: String
+
+
+end
+
