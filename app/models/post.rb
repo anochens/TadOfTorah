@@ -24,5 +24,11 @@ class Post
   embeds_many :comments
 
 
+  def clean_title
+
+		title || "Untitled"
+   end
+
+
 end
 

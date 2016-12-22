@@ -1,30 +1,32 @@
 <%- model_class = Post -%>
 
-<% title = 'Untitled' %>
-<% title = @post.title if @post %>
-
 <div class="page-header">
-  <h1><%= link_to t('.show', :default => title.titleize),
+  <h1><%= link_to t('.show', :default => @post.clean_title.titleize),
                       post_path(@post), :class => 'title' %></h1>
 </div>
 
-<dl class="dl-horizontal">
+<div class='container'>
+	<div class='row'>
+	  <div class="col-sm-2">
+		  <strong>By 
+		  <%= @post.author %></strong>
+	  </div>
 
-  <dt><strong>By: </strong></dt>
-  <dd><%= @post.author %></dd>
+	  <div class="col-sm-3">
+		  <%= @post.updated_at.strftime("%a %b %d, %Y") %>
+	  </div>
+	</div>
 
-  <dt><strong>Updated at: </strong></dt>
-  <dd><%= @post.updated_at %></dd>
-               
-  <dt></dt>
-  <dd><%= @post.content %></dd>
+	<div class='row'>
+	  <div class="col-sm-8">
+  
+  			<%= @post.content %></dd>
 
-  <dt><strong><%= model_class.human_attribute_name(:ref_source) %>:</strong></dt>
-  <dd><%= @post.ref_source %></dd>
-
-
- 
-
+		  <strong><%= model_class.human_attribute_name(:ref_source) %>:</strong>
+  <%= @post.ref_source %>
+	  </div>
+	 </div>
+</div>
 
 </dl>
 

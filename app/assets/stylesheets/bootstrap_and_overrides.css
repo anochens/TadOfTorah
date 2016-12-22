@@ -4,3 +4,11 @@
   Static version of css will use Glyphicons sprites by default
   =require twitter-bootstrap-static/sprites
 */
+
+.container {
+
+	margin:auto;
+	word-wrap: break-word
+
+
+}
