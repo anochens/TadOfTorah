@@ -43,8 +43,8 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'mongoid', github: 'mongoid/mongoid'
+gem 'mongoid'#, github: 'mongoid/mongoid'
 gem 'bson_ext'
 gem 'faker'
-gem 'twitter-bootstrap-rails', :git => 'http://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'twitter-bootstrap-rails'#, :git => 'http://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'therubyracer', :platform => :ruby
