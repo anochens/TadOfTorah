@@ -1,5 +1,8 @@
 production:
-  uri: <%= ENV['MONGOLAB_URI'] %>
+	clients:
+		default:
+			uri: <%= ENV['MONGOLAB_URI'] %>
+      database: torah_blog_test
 
 
 development:
